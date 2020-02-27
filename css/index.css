@@ -1,3 +1,52 @@
+@font-face {
+  font-family: 'Akronim';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Akronim Regular'), local('Akronim-Regular'), url(https://fonts.gstatic.com/s/akronim/v9/fdN-9sqWtWZZlHRpygd7lA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v20/7Aulp_0qiz-aVz7u3PJLcUMYOFnOkEk30e0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Akronim';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Akronim Regular'), local('Akronim-Regular'), url(https://fonts.gstatic.com/s/akronim/v9/fdN-9sqWtWZZlHRpygd7lA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Muli';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/muli/v20/7Aulp_0qiz-aVz7u3PJLcUMYOFnOkEk30e0.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Permanent Marker Regular'), local('PermanentMarker-Regular'), url(https://fonts.gstatic.com/s/permanentmarker/v9/Fh4uPib9Iyv2ucM6pGQMWimMp004La2Ceg.ttf) format('truetype');
+}
 html,
 body,
 div,
@@ -122,23 +171,131 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+.container {
+  margin: 0 5%;
+}
 .navBar {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media (min-width: 500px) {
+  .navBar {
+    border-bottom: 2px grey dashed;
+  }
+}
+@media (min-width: 800px) {
+  .navBar {
+    flex-direction: row-reverse;
+    border-bottom: 2px grey dashed;
+  }
+}
 .navBar .navTitle {
-  font-size: 2rem;
-  font-weight: bolder;
+  font-size: 2.5rem;
+  font-weight: 300;
   color: red;
+  font-family: 'akronim';
+  font-family: 'Akronim';
+}
+@media (min-width: 800px) {
+  .navBar .navTitle {
+    padding-right: 2%;
+  }
 }
 .navBar .navList {
+  width: 100%;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 500px) {
+  .navBar .navList {
+    flex-direction: row;
+  }
 }
 .navBar .navList a {
-  font-size: 1rem;
-  font-weight: 300;
-  color: grey;
+  padding: 2% 0;
+  width: 50%;
+  font-size: 0.75rem;
+  font-weight: light;
+  color: black;
+  font-family: 'Permanent Marker';
   text-decoration: none;
+  text-align: center;
+  border-bottom: 2px solid grey;
+}
+.navBar .navList a:hover {
+  color: blue;
+}
+@media (min-width: 500px) {
+  .navBar .navList a {
+    border-bottom: none;
+    font-size: 1rem;
+  }
+}
+@media (min-width: 800px) {
+  .navBar .navList a {
+    font-size: 1.25rem;
+  }
+}
+.intro {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.intro .mainHead {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 15px;
+  text-align: center;
+}
+@media (min-width: 500px) {
+  .intro .mainHead {
+    flex-direction: row;
+  }
+}
+.intro .mainHead .headText {
+  width: 100%;
+  border: 1px blue solid;
+}
+@media (min-width: 500px) {
+  .intro .mainHead .headText {
+    width: 49%;
+  }
+}
+.intro .mainHead .headText .introText {
+  font-size: 4rem;
+  font-weight: 300;
+  color: black;
+  font-family: 'akronim';
+  margin: 2% 0 ;
+}
+@media (min-width: 500px) {
+  .intro .mainHead .headText .introText {
+    margin-left: 2%;
+  }
+}
+@media (min-width: 800px) {
+  .intro .mainHead .headText .introText {
+    padding-top: 2%;
+    font-size: 6rem;
+  }
+}
+.intro .mainHead .headImg {
+  width: 100%;
+  border: 1px red solid;
+}
+.intro .mainHead .headImg .headerImg {
+  width: 80%;
+  border: 1px black solid;
+  border-radius: 25%;
+}
+@media (min-width: 500px) {
+  .intro .mainHead .headImg .headerImg {
+    width: 49%;
+    margin: 2% 0;
+  }
 }

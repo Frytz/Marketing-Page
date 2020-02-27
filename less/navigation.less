@@ -1,20 +1,55 @@
 // Navigations
+
 .navBar {
+  
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+    @media @tablet {
+        border-bottom: 2px grey dashed;
+    }
+    @media @desk {
+        flex-direction: row-reverse;
+        // background-color: blue;
+        border-bottom: 2px grey dashed;
+    }
     .navTitle{
-        .hFontProp(2rem, bolder, red);
-        // font-size: 2rem;
-        // font-weight: bolder;
-        // color: red;
+        .hFontProp(2.5rem, 300, red, @hFont);
+       
+        font-family: 'Akronim', ;
+
+       @media @desk{
+           padding-right: 2%;
+       }
     }
     .navList {
+        width: 100%;
         display: flex;
+        flex-wrap: nowrap;
         flex-direction: column;
-        a {
-        .hFontProp(1rem, 300, grey);
-            text-decoration: none;
+        align-items: center;
+        // background-color:blue;
+        @media @tablet {
+            flex-direction: row;
         }
+        a {
+            padding: 2% 0;
+            width: 50%;
+            .textFontProp(.75rem, light ,black, @tFont1);
+            text-decoration: none;
+            text-align: center;
+            border-bottom: 2px solid grey;
+        &:hover {
+            color: blue;
+        }
+            @media @tablet {
+            border-bottom: none;
+            font-size: 1rem;
+        }
+        @media @desk {
+            font-size: 1.25rem;
+        }    
+    }
     }
 }

@@ -1,8 +1,16 @@
 // Mixins
-.hFontProp (@size, @weight, @color){
+.hFontProp (@size, @weight, @color, @font){
     font-size: @size;
     font-weight: @weight;
     color: @color;
+    font-family: @font;
+}
+.textFontProp ( @size, @weight, @color, @font)
+{
+    font-size: @size;
+    font-weight: @weight;
+    color: @color;
+    font-family: @font; 
 }
 
 // exits

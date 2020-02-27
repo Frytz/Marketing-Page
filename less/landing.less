@@ -1,10 +1,57 @@
 //Landing Content
-// body {
-//     background-color: blue;
-// @media @tablet {
-//     background-color: red;
-// }
-// @media @desk {
-//     background-color: green;
-// }
-// }
+
+.intro{
+width: 100%;
+display: flex;
+align-items: center;
+// border: 1px red solid;
+
+
+.mainHead {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    // border: 1px blue solid;
+   margin: 15px;
+    text-align: center;
+    @media @tablet {
+        flex-direction: row;
+    }
+.headText {    
+    width: 100%;
+    border: 1px blue solid;
+    @media @tablet {
+        width: 49%;
+    }
+
+.introText {
+    .hFontProp(4rem, 300,black, @hFont);
+    // border: green 1px solid;
+    margin:2% 0 ;
+    @media @tablet{
+       
+        margin-left: 2%;
+    }
+    @media @desk {
+        padding-top: 2%;
+        font-size: 6rem;
+    }
+}
+}
+.headImg {
+    width: 100%;
+    border: 1px red solid;
+    .headerImg{
+    width:80%;
+    border: 1px black solid;
+    border-radius: 25%;
+    @media @tablet {
+    width: 49%;
+        margin: 2% 0;
+    }
+}
+}    
+}
+
+}
